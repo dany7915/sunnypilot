@@ -188,7 +188,7 @@ class CarInterface(CarInterfaceBase):
       ret.minSteerSpeed = 0.
 
     if Params().get_bool("HkgSmoothStop"):
-      ret.vEgoStopping = 0.15
+      ret.vEgoStopping = 0.05
       ret.stoppingDecelRate = 0.05
       ret.startAccel = 0.
 
