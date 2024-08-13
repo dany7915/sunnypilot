@@ -104,8 +104,9 @@ class CarInterface(CarInterfaceBase):
     ret.pcmCruise = not ret.openpilotLongitudinalControl
 
     ret.stoppingControl = True
-    ret.vEgoStarting = 0.1
-    ret.startAccel = 1.6
+    ret.vEgoStarting = 0.05
+    ret.stoppingDecelRate = 0.05
+    ret.startAccel = 0.
     ret.longitudinalActuatorDelay = 0.5
 
     if ret.flags & (HyundaiFlags.HYBRID | HyundaiFlags.EV):
