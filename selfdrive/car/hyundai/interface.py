@@ -105,8 +105,9 @@ class CarInterface(CarInterfaceBase):
 
     ret.stoppingControl = True
     ret.vEgoStarting = 0.1
-    ret.startAccel = 1.6
-    ret.longitudinalActuatorDelay = 0.5
+    ret.startAccel = 0.3
+    ret.stoppingDecelRate = 0.05
+    ret.longitudinalActuatorDelay = 0.2
 
     if ret.flags & (HyundaiFlags.HYBRID | HyundaiFlags.EV):
       ret.startingState = False
