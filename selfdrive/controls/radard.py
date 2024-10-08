@@ -16,7 +16,7 @@ from openpilot.selfdrive.pandad import can_capnp_to_list
 
 
 # Default lead acceleration decay set to 50% at 1s
-_LEAD_ACCEL_TAU = 1.5
+_LEAD_ACCEL_TAU = 0.5
 
 # radar tracks
 SPEED, ACCEL = 0, 1     # Kalman filter states enum
@@ -79,7 +79,7 @@ class Track:
     if abs(self.aLeadK) < 0.5:
       self.aLeadTau = _LEAD_ACCEL_TAU
     else:
-      self.aLeadTau *= 0.9
+      self.aLeadTau *= 0.95
 
     self.cnt += 1
 
