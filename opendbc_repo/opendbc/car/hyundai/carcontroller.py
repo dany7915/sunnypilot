@@ -145,10 +145,10 @@ class CarController(CarControllerBase, EsccCarController, LongitudinalController
       self.angle_torque_override_cycles = int(self._params.get("HkgTuningOverridingCycles") or self.angle_torque_override_cycles)
       self.angle_enable_smoothing_factor = self._params.get_bool("EnableHkgTuningAngleSmoothingFactor")
 
-    if self.CP.carFingerprint == BASELINE_CP.carFingerprint:
+#    if self.CP.carFingerprint == BASELINE_CP.carFingerprint:
       # If the car is the same as the baseline model, we limit it slightly. If we are NOT the baseline model, we are already being limited by that.
-      self.angle_limits.MAX_LATERAL_JERK = self.angle_limits.MAX_LATERAL_JERK * 0.8
-      self.angle_limits.MAX_LATERAL_ACCEL = self.angle_limits.MAX_LATERAL_ACCEL * 0.8
+#      self.angle_limits.MAX_LATERAL_JERK = self.angle_limits.MAX_LATERAL_JERK * 0.8
+#      self.angle_limits.MAX_LATERAL_ACCEL = self.angle_limits.MAX_LATERAL_ACCEL * 0.8
 
 
   def update(self, CC, CC_SP, CS, now_nanos):
