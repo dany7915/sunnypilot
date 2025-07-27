@@ -23,7 +23,7 @@ ACCELERATION_DUE_TO_GRAVITY = 9.81  # m/s^2
 
 # Add extra tolerance for average banked road since safety doesn't have the roll
 AVERAGE_ROAD_ROLL = 0.06  # ~3.4 degrees, 6% superelevation. higher actual roll lowers lateral acceleration
-MAX_LATERAL_ACCEL = 4.6
+MAX_LATERAL_ACCEL = 3.6
 MAX_LATERAL_JERK = 5.0
 
 ButtonType = structs.CarState.ButtonEvent.Type
